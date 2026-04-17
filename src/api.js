@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3000'
+export const BASE = 'https://nodejs312.dszcbaross.edu.hu'
 
 // ========== REGISZTRÁCIÓ ==========
 export async function registration(email, username, password) {  
