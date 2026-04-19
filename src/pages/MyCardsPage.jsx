@@ -148,18 +148,6 @@ export default function MyCardsPage() {
             >
                 {selectedCard && (
                     <>
-                        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                            <img 
-                                src={getImageUrl(selectedCard)}
-                                alt={`${selectedCard.manufacturer} ${selectedCard.name}`}
-                                style={{
-                                    maxWidth: '100%',
-                                    maxHeight: '300px',
-                                    borderRadius: '15px',
-                                    boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
-                                }}
-                            />
-                        </div>
 
                         {selectedCard.count > 1 && (
                             <h3 style={{ textAlign: 'center', color: '#666', marginBottom: '20px', fontSize: 'clamp(1rem, 4vw, 1.3rem)' }}>
