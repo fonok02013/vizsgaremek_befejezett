@@ -66,9 +66,7 @@ export default function MyCardsPage() {
         navigation('/')
     }
 
-    const getImageUrl = (card) => {
-        return card.image_url || `https://via.placeholder.com/400x300?text=${card.manufacturer}+${card.name}`;
-    }
+    
 
     // Reszponzív kártyarács
     const cardContainerStyle = {
