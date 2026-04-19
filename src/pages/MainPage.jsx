@@ -39,13 +39,12 @@ export default function MainPage() {
         <div className="vh-100 d-flex flex-column">
             <Navbar title="Car Cards" user={user} onLogout={handleLogout} />
 
-            <div className="flex-grow-1 d-flex justify-content-center align-items-center"
-                style={{ backgroundColor: '#f5f5f5' }}>
-
+            <div className="flex-grow-1 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#f5f5f5' }}>
                 <div className="container px-3 px-md-4">
                     <div className="row justify-content-center g-3 g-md-4">
-
-                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center responsive-container">
+                        
+                        {/* Market gomb */}
+                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                             <MainMenuButton
                                 image={marketImage}
                                 alt="Market"
@@ -54,7 +53,8 @@ export default function MainPage() {
                             />
                         </div>
 
-                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center responsive-container">
+                        {/* Open Packs gomb */}
+                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                             <MainMenuButton
                                 image={openpacksImage}
                                 alt="Open Packs"
@@ -63,7 +63,8 @@ export default function MainPage() {
                             />
                         </div>
 
-                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center responsive-container">
+                        {/* My Cards gomb */}
+                        <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                             <MainMenuButton
                                 image={mycardsImage}
                                 alt="My Cards"

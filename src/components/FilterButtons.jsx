@@ -7,15 +7,13 @@ export default function FilterButtons({ filterType, setFilterType, counts }) {
         color: filterType === type ? 'white' : '#666',
         fontWeight: '500',
         cursor: 'pointer',
-        transition: 'all 0.2s ease',
-        fontSize: 'clamp(0.7rem, 3vw, 0.9rem)',
-        whiteSpace: 'nowrap'
+        transition: 'all 0.2s ease'
     })
 
     return (
         <div style={{
             display: 'flex',
-            gap: '8px',
+            gap: '10px',
             backgroundColor: '#ffffff',
             padding: '8px',
             borderRadius: '50px',

@@ -2,6 +2,7 @@ export default function MainMenuButton({ image, alt, text, onClick }) {
     const buttonContainerStyle = {
         width: '100%',
         maxWidth: '350px',
+        minWidth: '250px',
         height: 'auto',
         aspectRatio: '1 / 1.2',
         margin: '0 auto',
@@ -37,7 +38,7 @@ export default function MainMenuButton({ image, alt, text, onClick }) {
 
     const textStyle = {
         padding: '20px 0',
-        fontSize: 'clamp(1rem, 4vw, 1.5rem)',
+        fontSize: '1.5rem',
         fontWeight: '600',
         color: '#333',
         textAlign: 'center',

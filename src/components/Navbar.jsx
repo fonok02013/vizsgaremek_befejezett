@@ -68,20 +68,19 @@ export default function Navbar({ title, user, onLogout, showBackButton = false }
                         <img src={logo} alt="Car Cards Logo" style={{ height: '50px', width: 'auto' }} />
                     </button>
 
-                    {/* Középen a cím - csak desktopon */}
-                    {!isMobile && (
-                        <span style={{
-                            fontSize: '2rem',
-                            fontWeight: '500',
-                            color: '#000000',
-                            lineHeight: '1',
-                            position: 'absolute',
-                            left: '50%',
-                            transform: 'translateX(-50%)'
-                        }}>
-                            {title}
-                        </span>
-                    )}
+                    {/* Középen a cím - mindig középen desktopon */}
+                    <span style={{
+                        fontSize: '2rem',
+                        fontWeight: '500',
+                        color: '#000000',
+                        lineHeight: '1',
+                        position: 'absolute',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        display: isMobile ? 'none' : 'block'
+                    }}>
+                        {title}
+                    </span>
 
                     {/* Jobb oldali ikonok */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -159,9 +158,9 @@ export default function Navbar({ title, user, onLogout, showBackButton = false }
 
                         {/* Mobil: hamburger menü */}
                         {isMobile && (
-                            <HamburgerMenu
-                                user={user}
-                                onLogout={onLogout}
+                            <HamburgerMenu 
+                                user={user} 
+                                onLogout={onLogout} 
                                 onOpenSettings={handleOpenSettings}
                             />
                         )}

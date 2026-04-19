@@ -286,41 +286,39 @@ export default function MarketPage() {
         className="flex-grow-1 container-fluid p-4"
         style={{ overflowY: "auto", backgroundColor: "#f5f5f5" }}
       >
-        {/* Szűrő sor - reszponzív */}
+        {/* Szűrő sor */}
         <div className="row mb-4 align-items-center">
-          <div className="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-            {/ FilterButtons komponens /}
-            <div className="order-md-2 mb-3 mb-md-0">
-              <FilterButtons
-                filterType={filterType}
-                setFilterType={setFilterType}
-                counts={filterCounts}
-              />
-            </div>
+          <div className="col-12 d-flex justify-content-between align-items-center">
+            {/ Bal oldali üres spacer /}
+            <div style={{ width: "120px" }}></div>
 
-            {/ POST OFFER gomb /}
+            {/ FilterButtons /}
+            <FilterButtons
+              filterType={filterType}
+              setFilterType={setFilterType}
+              counts={filterCounts}
+            />
+
+            {/ POST OFFER gomb */}
             <button
-              className="order-md-3"
               style={{
                 padding: "10px 25px",
                 backgroundColor: "#000000",
                 color: "white",
                 border: "none",
                 borderRadius: "30px",
-                fontSize: "clamp(0.8rem, 3vw, 0.95rem)",
+                fontSize: "0.95rem",
                 fontWeight: "500",
                 cursor: "pointer",
                 transition: "all 0.3s ease",
-                width: "auto",
-                minWidth: "120px"
+                width: "120px"
               }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#333333")}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#000000")}
               onClick={handlePostOffer}
             >
               POST OFFER
             </button>
-
-            {/* Üres spacer - csak desktopon látszik */}
-            <div style={{ width: "120px" }} className="order-md-1 d-none d-md-block"></div>
           </div>
         </div>
 
