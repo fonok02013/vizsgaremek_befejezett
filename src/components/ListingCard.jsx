@@ -1,12 +1,5 @@
 export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
-    const getImageUrl = (item) => {
-        // Ha van image_url az adatbázisban, azt használjuk
-        if (item.image_url && item.image_url !== "") {
-            return item.image_url;
-        }
-        // Különben placeholder
-        return `https://via.placeholder.com/300x120?text=${item.manufacturer}+${item.name}`;
-    }
+    console.log(listing);
 
     return (
         <div style={{
@@ -31,16 +24,16 @@ export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
                 e.currentTarget.style.borderColor = '#ddd'
             }}>
             <img
-                src={getImageUrl(listing)}
+                src={`./src/assets/${listing.image_url}`}
                 alt={`${listing.manufacturer} ${listing.name}`}
                 style={{
                     width: '100%',
-                    height: '120px',
+                    height: '280px',
                     objectFit: 'cover',
                     borderBottom: '1px solid #eee'
                 }}
                 onError={(e) => {
-                    e.target.src = `https://via.placeholder.com/300x120?text=${listing.manufacturer}+${listing.name}`
+                    e.target.src = `./src/assets/carcardsLogo.png`
                 }}
             />
 
