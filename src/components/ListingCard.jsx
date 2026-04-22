@@ -24,7 +24,7 @@ export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
                 e.currentTarget.style.borderColor = '#ddd'
             }}>
             <img
-                src={`./src/assets/${listing.image_url}`}
+                src={`/assets/${listing.image_url}`}
                 alt={`${listing.manufacturer} ${listing.name}`}
                 style={{
                     width: '100%',
@@ -33,7 +33,7 @@ export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
                     borderBottom: '1px solid #eee'
                 }}
                 onError={(e) => {
-                    e.target.src = `./src/assets/carcardsLogo.png`
+                    e.target.src = `/assets/carcardsLogo.png`
                 }}
             />
 
