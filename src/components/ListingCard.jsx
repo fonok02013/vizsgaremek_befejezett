@@ -1,6 +1,12 @@
 export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
     console.log(listing);
 
+    const getImageUrl = (listing) => {
+        const key = `../assets/${listing.image_url}`
+        return carImages[key]?.default
+            || `https://via.placeholder.com/300x150?text=${card.manufacturer}+${card.name}`;
+    }
+
     return (
         <div style={{
             backgroundColor: '#ffffff',
@@ -24,7 +30,7 @@ export default function ListingCard({ listing, user, onMakeOffer, onDelete }) {
                 e.currentTarget.style.borderColor = '#ddd'
             }}>
             <img
-                src={`/assets/${listing.image_url}`}
+                src={getImageUrl(listing)}
                 alt={`${listing.manufacturer} ${listing.name}`}
                 style={{
                     width: '100%',
